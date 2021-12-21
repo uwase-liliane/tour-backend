@@ -17,9 +17,10 @@ app.use("/",(req,res)=> res.status(200).json({
     message:"This is tour APi"
 }))
 const dbUrl=process.env.DATABASEURL;
+const port = process.env.PORT;
 mongoose.connect(dbUrl).then (()=>console.log("database connect succesfully"))
 app.listen(3030,()=>{
-    console.log(`server is running on pot 3030`)
+    console.log(`server is running on port ${port}`)
     
 })
 export default app
