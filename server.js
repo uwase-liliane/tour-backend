@@ -1,5 +1,5 @@
 import express from "express";
-import bodyParser from "body-Parser";
+import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRouter from "./src/routes/userRoutes";
@@ -19,7 +19,7 @@ app.use("/",(req,res)=> res.status(200).json({
 const dbUrl=process.env.DATABASEURL;
 const port = process.env.PORT;
 mongoose.connect(dbUrl).then (()=>console.log("database connect succesfully"))
-app.listen(3030,()=>{
+app.listen(port,()=>{
     console.log(`server is running on port ${port}`)
     
 })

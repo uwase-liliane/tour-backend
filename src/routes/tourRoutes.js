@@ -14,7 +14,7 @@ validator.newToursRules(),
 validator.validateInput,
 tourController.createTours);
 tourRouter.get("/alltour", tourController.getAllTours);
-tourRouter.get("/:id",tourController.getOneTour)
+tourRouter.get("/:d",tourController.getOneTour)
 
 
 
